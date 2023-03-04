@@ -4,11 +4,13 @@ function create(event) {
   event.preventDefault();
   let name = document.getElementById('name').value;
   let email = document.getElementById('email').value;
+  let telefone = document.getElementById('telefone').value;
   let item = {$name: name, email: email, telefone: telefone};
   data.push(item);
-  document.getElementById('table-body').innerHTML += '<tr><td>' + name + '</td><td>' + email + '</td><td><button onclick="update(event)">Editar</button><button onclick="remove(event)">Excluir</button></td></tr>';
+  document.getElementById('table-body').innerHTML += '<tr><td>' + name + '</td><td>' + email + '</td><td>' + telefone + '</td><td><button onclick="update(event)">Editar</button><button onclick="remove(event)">Excluir</button></td></tr>';
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
+  document.getElementById('telefone').value = ''
 }
 
 function update(event) {
